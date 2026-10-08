@@ -40,7 +40,15 @@ error: error.message || "OpenAI request failed."
 }
 });
 
+// Export Express app for Vercel
+module.exports = app;
+
+// Run locally
+if (require.main === module) {
 app.listen(3000, () => {
-console.log("Student app running at http://localhost:3000");
+console.log("Student Productivity App running on http://localhost:3000");
 });
+}
+
+
 
